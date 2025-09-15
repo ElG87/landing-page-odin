@@ -92,10 +92,11 @@ section p{
 }
 
 #info-cards{
-    background-color: #E5E7EB;
+    background-color: #F9FAF8;
     display: flex;
     gap: 8px;
     justify-content: center;
+    padding: 80px 0px;
 }
 .info-card{
     border: solid 3px #3882F6;
@@ -103,15 +104,13 @@ section p{
     display: flex;
     justify-content: space-around;
     text-align: center;
-    margin-top: 20px;
+
 }
 /* Quote section styling */
 #quote{
     font-style: italic;
     background-color: #E5E7EB;
-    border-left: 4px solid #ccc;
-    padding-left: 10px;
-    margin: 20px 0;
+    height: 12vh;
     display: flex;
     justify-content: center;
     align-items: center;
