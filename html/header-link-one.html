@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tafelkaart Aniyah</title>
+    <style>
+        @media print {
+            body {
+                margin: 0;
+                padding: 10px;
+                background: white !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .tafelkaart {
+                box-shadow: none !important;
+            }
+        }
+        
+        body {
+            margin: 0;
+            padding: 15px;
+            background: linear-gradient(135deg, #f8f4ff 0%, #fff0f5 100%);
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .naam {
+            font-size: 32px;
+            font-weight: bold;
+            color: #6b4e7d;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+        
+        .titel {
+            font-size: 22px;
+            color: #9370db;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        
+        .decoratie-header {
+            font-size: 20px;
+            color: #8fbc8f;
+        }
+        
+        .tafelkaart {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 3px solid #d8bfd8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .tafels-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .tafel {
+            background: linear-gradient(135deg, #f0f8f0 0%, #f8f4ff 100%);
+            border-radius: 12px;
+            padding: 15px;
+            border: 2px solid #e6b3ff;
+            position: relative;
+        }
+        
+        .tafel-nummer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #6b4e7d;
+            text-align: center;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #dda0dd, #9370db);
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .som {
+            font-size: 16px;
+            color: #2c2c2c;
+            margin: 6px 0;
+            padding: 4px 8px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 6px;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+        
+        .som:nth-child(even) {
+            background: rgba(240, 248, 255, 0.8);
+        }
+        
+        .getal {
+            font-weight: bold;
+            color: #8b008b;
+        }
+        
+        .uitkomst {
+            font-weight: bold;
+            color: #228b22;
+        }
+        
+        .decoratie-hoek {
+            position: absolute;
+            font-size: 14px;
+            opacity: 0.4;
+        }
+        
+        .hoek-lb {
+            bottom: 5px;
+            left: 5px;
+        }
+        
+        .hoek-rb {
+            bottom: 5px;
+            right: 5px;
+        }
+        
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #9370db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        
+        .print-button:hover {
+            background: #8a2be2;
+            transform: translateY(-2px);
+        }
+        
+        .print-info {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" onclick="window.print()">🖨️ Afdrukken</button>
+
+    <div class="header">
+        <div class="naam">ANIYAH</div>
+        <div class="titel">Tafelkaart</div>
+        <div class="decoratie-header">✨ 🌟 ✨</div>
+    </div>
+
+    <div class="tafelkaart">
+        <div class="tafels-container">
+            <!-- Tafel van 1 -->
+            <div class="tafel">
+                <div class="tafel-nummer">Tafel van 1</div>
+                <div class="som"><span class="getal">1</span> × 1 = <span class="uitkomst">1</span></div>
+                <div class="som"><span class="getal">1</span> × 2 = <span class="uitkomst">2</span></div>
+                <div class="som"><span class="getal">1</span> × 3 = <span class="uitkomst">3</span></div>
+                <div class="som"><span class="getal">1</span> × 4 = <span class="uitkomst">4</span></div>
+                <div class="som"><span class="getal">1</span> × 5 = <span class="uitkomst">5</span></div>
+                <div class="som"><span class="getal">1</span> × 6 = <span class="uitkomst">6</span></div>
+                <div class="som"><span class="getal">1</span> × 7 = <span class="uitkomst">7</span></div>
+                <div class="som"><span class="getal">1</span> × 8 = <span class="uitkomst">8</span></div>
+                <div class="som"><span class="getal">1</span> × 9 = <span class="uitkomst">9</span></div>
+                <div class="som"><span class="getal">1</span> × 10 = <span class="uitkomst">10</span></div>
+                <div class="decoratie-hoek hoek-lb">🌸</div>
+                <div class="decoratie-hoek hoek-rb">🦋</div>
+            </div>
+
+            <!-- Tafel van 2 -->
+            <div class="tafel">
+                <div class="tafel-nummer">Tafel van 2</div>
+                <div class="som"><span class="getal">2</span> × 1 = <span class="uitkomst">2</span></div>
+                <div class="som"><span class="getal">2</span> × 2 = <span class="uitkomst">4</span></div>
+                <div class="som"><span class="getal">2</span> × 3 = <span class="uitkomst">6</span></div>
+                <div class="som"><span class="getal">2</span> × 4 = <span class="uitkomst">8</span></div>
+                <div class="som"><span class="getal">2</span> × 5 = <span class="uitkomst">10</span></div>
+                <div class="som"><span class="getal">2</span> × 6 = <span class="uitkomst">12</span></div>
+                <div class="som"><span class="getal">2</span> × 7 = <span class="uitkomst">14</span></div>
+                <div class="som"><span class="getal">2</span> × 8 = <span class="uitkomst">16</span></div>
+                <div class="som"><span class="getal">2</span> × 9 = <span class="uitkomst">18</span></div>
+                <div class="som"><span class="getal">2</span> × 10 = <span class="uitkomst">20</span></div>
+                <div class="decoratie-hoek hoek-lb">🌺</div>
+                <div class="decoratie-hoek hoek-rb">🌟</div>
+            </div>
+
+            <!-- Tafel van 3 -->
+            <div class="tafel">
+                <div class="tafel-nummer">Tafel van 3</div>
+                <div class="som"><span class="getal">3</span> × 1 = <span class="uitkomst">3</span></div>
+                <div class="som"><span class="getal">3</span> × 2 = <span class="uitkomst">6</span></div>
+                <div class="som"><span class="getal">3</span> × 3 = <span class="uitkomst">9</span></div>
+                <div class="som"><span class="getal">3</span> × 4 = <span class="uitkomst">12</span></div>
+                <div class="som"><span class="getal">3</span> × 5 = <span class="uitkomst">15</span></div>
+                <div class="som"><span class="getal">3</span> × 6 = <span class="uitkomst">18</span></div>
+                <div class="som"><span class="getal">3</span> × 7 = <span class="uitkomst">21</span></div>
+                <div class="som"><span class="getal">3</span> × 8 = <span class="uitkomst">24</span></div>
+                <div class="som"><span class="getal">3</span> × 9 = <span class="uitkomst">27</span></div>
+                <div class="som"><span class="getal">3</span> × 10 = <span class="uitkomst">30</span></div>
+                <div class="decoratie-hoek hoek-lb">🌻</div>
+                <div class="decoratie-hoek hoek-rb">💖</div>
+            </div>
+
+            <!-- Tafel van 4 -->
+            <div class="tafel">
+                <div class="tafel-nummer">Tafel van 4</div>
+                <div class="som"><span class="getal">4</span> × 1 = <span class="uitkomst">4</span></div>
+                <div class="som"><span class="getal">4</span> × 2 = <span class="uitkomst">8</span></div>
+                <div class="som"><span class="getal">4</span> × 3 = <span class="uitkomst">12</span></div>
+                <div class="som"><span class="getal">4</span> × 4 = <span class="uitkomst">16</span></div>
+                <div class="som"><span class="getal">4</span> × 5 = <span class="uitkomst">20</span></div>
+                <div class="som"><span class="getal">4</span> × 6 = <span class="uitkomst">24</span></div>
+                <div class="som"><span class="getal">4</span> × 7 = <span class="uitkomst">28</span></div>
+                <div class="som"><span class="getal">4</span> × 8 = <span class="uitkomst">32</span></div>
+                <div class="som"><span class="getal">4</span> × 9 = <span class="uitkomst">36</span></div>
+                <div class="som"><span class="getal">4</span> × 10 = <span class="uitkomst">40</span></div>
+                <div class="decoratie-hoek hoek-lb">🌷</div>
+                <div class="decoratie-hoek hoek-rb">✨</div>
+            </div>
+
+            <!-- Tafel van 5 -->
+            <div class="tafel">
+                <div class="tafel-nummer">Tafel van 5</div>
+                <div class="som"><span class="getal">5</span> × 1 = <span class="uitkomst">5</span></div>
+                <div class="som"><span class="getal">5</span> × 2 = <span class="uitkomst">10</span></div>
+                <div class="som"><span class="getal">5</span> × 3 = <span class="uitkomst">15</span></div>
+                <div class="som"><span class="getal">5</span> × 4 = <span class="uitkomst">20</span></div>
+                <div class="som"><span class="getal">5</span> × 5 = <span class="uitkomst">25</span></div>
+                <div class="som"><span class="getal">5</span> × 6 = <span class="uitkomst">30</span></div>
+                <div class="som"><span class="getal">5</span> × 7 = <span class="uitkomst">35</span></div>
+                <div class="som"><span class="getal">5</span> × 8 = <span class="uitkomst">40</span></div>
+                <div class="som"><span class="getal">5</span> × 9 = <span class="uitkomst">45</span></div>
+                <div class="som"><span class="getal">5</span> × 10 = <span class="uitkomst">50</span></div>
+                <div class="decoratie-hoek hoek-lb">🌼</div>
+                <div class="decoratie-hoek hoek-rb">🌈</div>
+            </div>
+
+            <!-- Tafel van 10 -->
+            <div class="tafel">
+                <div class="tafel-nummer">Tafel van 10</div>
+                <div class="som"><span class="getal">10</span> × 1 = <span class="uitkomst">10</span></div>
+                <div class="som"><span class="getal">10</span> × 2 = <span class="uitkomst">20</span></div>
+                <div class="som"><span class="getal">10</span> × 3 = <span class="uitkomst">30</span></div>
+                <div class="som"><span class="getal">10</span> × 4 = <span class="uitkomst">40</span></div>
+                <div class="som"><span class="getal">10</span> × 5 = <span class="uitkomst">50</span></div>
+                <div class="som"><span class="getal">10</span> × 6 = <span class="uitkomst">60</span></div>
+                <div class="som"><span class="getal">10</span> × 7 = <span class="uitkomst">70</span></div>
+                <div class="som"><span class="getal">10</span> × 8 = <span class="uitkomst">80</span></div>
+                <div class="som"><span class="getal">10</span> × 9 = <span class="uitkomst">90</span></div>
+                <div class="som"><span class="getal">10</span> × 10 = <span class="uitkomst">100</span></div>
+                <div class="decoratie-hoek hoek-lb">⭐</div>
+                <div class="decoratie-hoek hoek-rb">🎉</div>
+            </div>
+        </div>
+
+        <div class="print-info no-print">
+            💡 <strong>Tip:</strong> Begin met tafel van 1, 2, 5 en 10 - die zijn het makkelijkst!<br>
+            📝 Gebruik verschillende kleuren om elke tafel te oefenen
+        </div>
+    </div>
+</body>
+</html>
